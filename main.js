@@ -87,52 +87,57 @@
 // run()
 
 //bai 7
-
-// const changeTemperature = function(F){
+// function doF(){
+//     const doF = Number(prompt('nhap do F: '));
+//     return doF
+// }
+// const changeTemperature = function(){
+//     const F = doF();
 //     const C = (5/9)*(F-32);
 //     console.log(C);
 // }
-// const doF = Number(prompt('nhap do F: '))
-// changeTemperature(doF);
+// changeTemperature();
+
 
 
 // bai 8
 
-function typeWidth(){
-    var width = Number(prompt('nhap chieu rong: '));
-    return width
-}
-function typeHeight(){
-    var height = Number(prompt('nhap chieu cao: '));
-    return height
-}
+// function typeWidth(){
+//     var width = Number(prompt('nhap chieu rong: '));
+//     return width
+// }
+// function typeHeight(){
+//     var height = Number(prompt('nhap chieu cao: '));
+//     return height
+// }
     
-function dTich(size){
-    console.log(size.width*size.height);
-}
-const size = {
-    width: typeWidth(),
-    height: typeHeight()
-}
-dTich(size)
+// function dTich(size){
+//     console.log(size.width*size.height);
+// }
+// const size = {
+//     width: typeWidth(),
+//     height: typeHeight()
+// }
+// dTich(size)
 
 //bai 9
-// const diemSo = [];
-// const nhapDiem = (diemSo) => {
-//     diemSo[0] = Number(prompt('nhap diem mon Toan: '));
-//     diemSo[1] = Number(prompt('nhap diem mon Ly: '));
-//     diemSo[2] = Number(prompt('nhap diem mon Sinh: '));
-//     diemSo[3] = Number(prompt('nhap diem mon Anh: '));
-// }
-// const tinhDiem = (point) => {
-//     const result = (point[0]+point[1]+point[2]+point[3])/point.length;
-//     return result
-// }
-// const run = (point) => {
-//     nhapDiem(point);
-//     console.log(tinhDiem(point));
-// }
-// run(diemSo);
+const diemSo = [];
+const subject = ['Toan', 'Ly', 'Hoa', 'Anh']
+const nhapDiem = (diemSo) => {
+    for(let i = 0; i<4; i++){
+        diemSo[i] = Number(prompt(`nhap diem mon ${subject[i]}: `));
+    }
+}
+const tinhDiem = (point) => {
+    nhapDiem(point);
+    var total = 0;
+    for(let i = 0; i<point.length; i++){
+        total += point[i];
+    }
+    console.log(total/point.length);
+}
+
+tinhDiem(diemSo);
 
 //bai 10
 
