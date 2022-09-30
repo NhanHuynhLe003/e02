@@ -47,16 +47,21 @@
 
 // const user = {};
 
+/*
+    function run(user){
+    user.name = String(prompt('nhap ten nguoi dung: '));
+    user.age = Number(prompt('nhap tuoi nguoi dung: '));
+    gioiThieu(user)
+    }
+*/
 // function gioiThieu(user){
-//     user.name = String(prompt('nhap ten nguoi dung: '));
-//     user.age = Number(prompt('nhap tuoi nguoi dung: '));
 
 //     console.log(`xin chao minh ten ${user.name} `);
 //     console.log(`minh sinh nam ${2022-user.age}`);
 //     console.log('rat vui duoc gap ban');
 
 // }
-// gioiThieu(user);
+// run(user)
 
 //bai 6
 // const nguoiDung = {};
@@ -92,11 +97,24 @@
 
 
 // bai 8
-// const width = Number(prompt('nhap chieu rong: '));
-// const height = Number(prompt('nhap chieu cao: '));
 
-// const dienTich = width*height;
-// console.log(dienTich);
+function typeWidth(){
+    var width = Number(prompt('nhap chieu rong: '));
+    return width
+}
+function typeHeight(){
+    var height = Number(prompt('nhap chieu cao: '));
+    return height
+}
+    
+function dTich(size){
+    console.log(size.width*size.height);
+}
+const size = {
+    width: typeWidth(),
+    height: typeHeight()
+}
+dTich(size)
 
 //bai 9
 // const diemSo = [];
@@ -140,21 +158,21 @@
 //bai 11
 
 
-const inTen = function(name){
-    return (`xin chao minh ten ${name} `);
-};
-const inNamSinh = function(namSinh){
-    return (`minh sinh nam ${namSinh}`);
-};
-const nhapTen = String(prompt('nhap ho va ten: '));
-const nhapTuoi = Number(prompt('nhap nam sinh: '));
+// const inTen = function(name){
+//     return (`xin chao minh ten ${name} `);
+// };
+// const inNamSinh = function(namSinh){
+//     return (`minh sinh nam ${namSinh}`);
+// };
+// const nhapTen = String(prompt('nhap ho va ten: '));
+// const nhapTuoi = Number(prompt('nhap nam sinh: '));
 
-const printTenVaNamSinh = (ten, tuoi) => {
-    const luuTru = {};
-    luuTru.name = ten;
-    luuTru.age = tuoi;
-    return luuTru
+// const printTenVaNamSinh = (ten, tuoi) => {
+//     const luuTru = {};
+//     luuTru.name = ten;
+//     luuTru.age = tuoi;
+//     return luuTru
     
-};
+// };
 
-console.log(inTen(printTenVaNamSinh(nhapTen, nhapTuoi).name), inNamSinh(printTenVaNamSinh(nhapTen, nhapTuoi).age));
+// console.log(inTen(printTenVaNamSinh(nhapTen, nhapTuoi).name), inNamSinh(printTenVaNamSinh(nhapTen, nhapTuoi).age));
